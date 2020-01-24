@@ -9,10 +9,10 @@ let toggleTheme = function() {
     isDark = !isDark;
   } else {
     for (let key in darkTheme) {
-      let elems = document.querySelectorAll(`.${darkTheme[key]}`);
-      elems.forEach(elem => elem.classList.add(lightTheme[key]));
-      elems.forEach(elem => elem.classList.remove(darkTheme[key]));
-      themeColor.content = "#000000"
+      let elems = document.querySelectorAll(`.${lightTheme[key]}`);
+      elems.forEach(elem => elem.classList.add(darkTheme[key]));
+      elems.forEach(elem => elem.classList.remove(lightTheme[key]));
+      themeColor.content = "#f00000"
     }
     isDark = !isDark;
   }
